@@ -44,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
     Uri uri = Uri.parse(url);
 
     // Use a CustomTabsIntent.Builder to configure CustomTabsIntent.
+    //所谓的自定义的 chrome tab 就 都是由它  CustomTabsIntent.Builder  来完成
+    //  比如 分享图片的加载 见 mark1 
+    //  比如 关闭图标的加载 见 mark2
     CustomTabsIntent.Builder intentBuilder = new CustomTabsIntent.Builder();
 
     // set toolbar color
@@ -80,11 +83,13 @@ public class MainActivity extends AppCompatActivity {
         PendingIntent.getActivity(this, requestCode, intent, PendingIntent.FLAG_UPDATE_CURRENT);
     // Map the bitmap, text, and pending intent to this icon
     // Set tint to be true so it matches the toolbar color
+    // mark1 
     intentBuilder.setActionButton(bitmap, "Share Link", pendingIntent, true);
 
     // Set close button icon
     Bitmap bitmapBack =
         BitmapFactory.decodeResource(getResources(), R.drawable.ic_arrow_back_white_24dp);
+    // 关闭图标的加载 mark2
     intentBuilder.setCloseButtonIcon(bitmapBack);
 
     // and launch the desired Url with CustomTabsIntent.launchUrl()
