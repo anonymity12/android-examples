@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest package="sample.github.nisrulz.custombroadcastpermissions"
           xmlns:android="http://schemas.android.com/apk/res/android">
-
-
+<!--预计app3 不能收到 带（com.abc.permission.GET_DATA）权限的 广播 -->
+<!--因为 app 3 没有这样的两行 -->
+          
+              <!--<permission android:name="com.abc.permission.GET_DATA"/>
+    <uses-permission android:name="com.abc.permission.GET_DATA"/>-->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
