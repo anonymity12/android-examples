@@ -56,6 +56,13 @@ public class MainActivity extends AppCompatActivity {
     });
   }
 
+  /*
+    Picasso.with(context).invalidate(url);  // clear bitmap cache in memory
+    // 遍历disk cache 的url key，找出你想删的image url，然后remove掉。
+
+    Picasso.with(context).load("http://i.imgur.com/DvpvklR.png").into(imageView);
+  */
+  
   private void loadRandomImage() {
     Picasso.with(MainActivity.this).invalidate(RANDOM_IMAGE_URL);
 
