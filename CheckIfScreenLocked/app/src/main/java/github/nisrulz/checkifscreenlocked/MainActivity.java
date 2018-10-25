@@ -34,6 +34,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onReceive(Context context, Intent intent) {
                 String strAction = intent.getAction();
+                // 这里使用 KeyguardManager 是一个 锁屏解锁键盘的类 
+                /*
+                Class that can be used to lock and unlock the keyboard. 
+                The actual class to control the keyboard locking is KeyguardManager.KeyguardLock.
+                */
                 KeyguardManager kgMgr =
                         (KeyguardManager) getSystemService(Context.KEYGUARD_SERVICE);
                 if (strAction.equals(Intent.ACTION_SCREEN_OFF)) {
