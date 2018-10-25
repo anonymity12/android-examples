@@ -41,7 +41,7 @@
         tools:context="github.nisrulz.sample.databinding.MainActivity"
         tools:showIn="@layout/activity_main"
         >
-
+      <!--我们在activity 里就会直接使用这写id了，比如： binding.hello.setText（“标题”）-->
       <TextView
           android:id="@+id/hello"
           android:layout_width="wrap_content"
