@@ -12,10 +12,16 @@ public class AwesomeLibMain {
      * below will become invalid statement as Retrofit class will not exist on the classpath  when
      * this module is compiled.
      *
-     * Having set Retrofit as compileOnly dependency for the awesomelib module, makes it dependent on
+     * Having set Retrofit as compileOnly dependency for the awesomelib module, makes it dependent on （？？？）
      * app module's dependency graph in terms of availability  of Retrofit class in the classpath
      * after compilation
      */
+    /*
+    当retrofit 被添加到 awesome lib 的build.gradle 之后, 下面的语句才有效，并且一个Retrofit 类会在class path 中可见。
+    如果没有 retrofit 依赖在 build.gradle  的mark1 处， 那么，语句无效
+    
+    Retrofit 仅仅是 compileOnly 的话，awesome lib 就是对 app 组件是独立的。？？？
+    */
     Retrofit retrofit = new Retrofit.Builder().baseUrl("https://swapi.co/api/").build();
 
     return hasRetrofitOnClasspath();
