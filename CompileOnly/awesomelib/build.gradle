@@ -31,5 +31,7 @@ dependencies {
 
 
   // Below is available only during the compilation time
+  // aws lib 只在编译的时候需要 依赖
+  // 之所以 只在编译的时候需要： retrofit 在编译时 ，通过反射生成我们需要的 比如 ServiceApi.class，然后运行时就不需要 retrofit啊！ 可能是这样
   compileOnly "com.squareup.retrofit2:retrofit:$retrofitVer"
 }
