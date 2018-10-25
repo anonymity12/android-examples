@@ -29,7 +29,8 @@ dependencies {
 
     implementation "com.android.support:appcompat-v7:$supportLibVer"
     implementation "com.android.support.constraint:constraint-layout:$constraintLayoutVer"
-
+    
+    // 这里有 对自己 的 另外的一个组件的  awesomelib  依赖
     implementation project(':awesomelib')
 
     // Comment/uncomment to see the availability of retrofit classes in the awesomelib module
