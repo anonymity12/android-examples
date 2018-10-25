@@ -4,7 +4,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.widget.Toast;
-
+//静态注册的一个Receiver
 public class MyBroadcastReceiver extends BroadcastReceiver {
 
     String ACTION = "github.nisrulz.action.MY_ACTION";
