@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private static String EXAMPLE_PASSWORD = "general_password";
 
     private String TEXT = "Real programmers count from 0";
-
+//就讲一下，示范一下AesCbcWithIntegrity.SecretKeys怎么用，我还是没看懂
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
