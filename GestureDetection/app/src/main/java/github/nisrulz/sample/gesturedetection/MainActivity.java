@@ -8,7 +8,7 @@ import android.view.MotionEvent;
 
 public class MainActivity extends AppCompatActivity {
 
-  //gesture detector
+  //gesture detector 主要的大类
   private GestureDetectorCompat gDetect;
 
   @Override protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     gDetect.onTouchEvent(event);
     return super.onTouchEvent(event);
   }
-
+// 主要的监听器
   public class GestureListener extends GestureDetector.SimpleOnGestureListener {
     private float flingMin = 100;
     private float velocityMin = 100;
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
       System.out.println("On Long Press");
       super.onLongPress(e);
     }
-
+    // 主要的判断 fling 时，  有前后的区分
     @Override
     public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
 
