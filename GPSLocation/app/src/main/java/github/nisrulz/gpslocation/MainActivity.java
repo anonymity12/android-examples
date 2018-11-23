@@ -77,6 +77,6 @@ public class MainActivity extends AppCompatActivity {
             else
                 Toast.makeText(getBaseContext(), "No Location Provider Found Check Your Code", Toast.LENGTH_SHORT).show();
         }
-
+ 
     }
 }
