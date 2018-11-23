@@ -37,6 +37,6 @@ public class CustomService extends GcmTaskService {
     gcmNetMUtil.oneOffTask();
 
     // Periodic Task
-    gcmNetMUtil.periodicTask();
+    gcmNetMUtil.periodicTask();  
   }
 }
